@@ -1,0 +1,149 @@
+@charset 'utf-8';
+
+body {
+	background: url('../image/exchange-bg.png') no-repeat center center;
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+
+.main {
+	width: 100%;
+	height: 90%;
+	overflow: hidden;
+}
+.iscroll {
+	padding-top: 5%;
+}
+.prize-lists {
+	padding: 0 3%;
+	height: 80px;
+	vertical-align: middle;
+	margin-bottom: 20px;
+}
+.prize-img {
+	width: 20%;
+	height: 100%;
+	line-height: 70px;
+	background: url('../image/prize-bg.png') no-repeat center center;
+	background-size: 100% 100%;
+	vertical-align: middle;
+	text-align: center;
+}
+.prize-img img {
+	max-width: 80%;
+	max-height: 60%;
+	vertical-align: middle;
+}
+.prize-message {
+	width: 50%;
+	padding: 0 3%;
+	color: #fff;
+	vertical-align: middle;
+	padding-top: 10px;
+}
+.prize-message-title {
+	font-family: 'ZZGFLH';
+	margin-bottom: 7px;
+	font-size: 16px;
+	vertical-align: middle;
+}
+.prize-message-detail {
+	width: 100%;
+	font-size: 12px;
+	margin-bottom: 3px;
+	vertical-align: middle;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.prize-message-time {
+	font-size: 12px;
+	vertical-align: middle;
+}
+.prize-btn {
+	width: 30%;
+	height: 100%;
+	line-height: 80px;
+	text-align: center;
+	vertical-align: middle;
+}
+.exchange-btn {
+	width: 90%;
+	height: 60%;
+	background: url('../image/exchange-btn.png') no-repeat center center;
+	background-size: 100% 100%;
+	vertical-align: middle;
+}
+.exchange-btn:active {
+	-webkit-transform: scale(0.95);
+	-moz-transform: scale(0.95);
+	-ms-transform: scale(0.95);
+	-o-transform: scale(0.95);
+	transform: scale(0.95);
+}
+button.exchanged {
+	background: url('../image/exchange-btn-no.png') no-repeat center center;
+	background-size: 100% 100%;
+}
+
+
+.footer {
+	width: 100%;
+	height: 10%;
+}
+.footer img {
+	width: 100%;
+	height: 100%;
+}
+
+
+.mask {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.4);
+	z-index: 9999;
+	display: none;
+}
+.exchange-box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -110px;
+	margin-left: -150px;
+	width: 300px;
+	height: 220px;
+	background: url('../image/exchange-box.png') no-repeat;
+	background-size: 100% 100%;
+	text-align: center;
+	padding-top: 8%;
+}
+.exchange-box img {
+	width: 70%;
+}
+.num {
+	margin: auto;
+	width: 60%;
+	padding: 5px 10px;
+	background: #fff;
+	font-size: 18px;
+	border-radius: 5px;
+	text-align: center;
+	margin-top: 30px;
+	color: #444;
+}
+.font {
+	font-size: 16px;
+	color: #444;
+	margin-top: 10px;
+}
+.close {
+	display: block;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}

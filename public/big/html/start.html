@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,maximum-scale=1.0,initial-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no,email=no" />
+	<title>扫码开始抽奖</title>
+
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/start.css">
+</head>
+<body>
+
+	<div class="start-content">
+		<div class="lucky-draw-box">
+			<div id="turn">
+				<img src="image/radius.png" alt="" />
+				<div class="radius-div radius-one">三折优惠券</div>
+				<div class="radius-div radius-two">精美杯子一份</div>
+				<div class="radius-div radius-three">五折优惠券</div>
+				<div class="radius-div radius-four">无奖品飞房</div>
+				<div class="radius-div radius-five">八折优惠券</div>
+				<div class="radius-div radius-six">九折优惠券</div>
+				<div class="radius-div radius-seven">赠送小食一份</div>
+				<div class="radius-div radius-eight">赠送小食三份</div>
+				<div class="radius-div radius-nine">招牌菜1折享</div>
+				<div class="radius-div radius-ten">免茶位</div>
+			</div>
+			<button class="start-btn"></button>
+		</div>
+
+		<div class="start-countDown"><span class="start-countDown-num">2</span>秒内完成活动</div>
+
+		<div class="prize-lists-box box-sizing">
+			<div class="prize-lists">
+				<div class="prize-lists-img">
+					<img src="image/5fold.png" alt="" />
+				</div>
+				<h5>五折优惠券</h5>
+			</div>
+			<div class="prize-lists">
+				<div class="prize-lists-img">
+					<img src="image/8fold.png" alt="" />
+				</div>
+				<h5>八折优惠券</h5>
+			</div>
+			<div class="prize-lists">
+				<div class="prize-lists-img">
+					<img src="image/one.png" alt="" />
+				</div>
+				<h5>赠送小食一份</h5>
+			</div>
+			<div class="prize-lists">
+				<div class="prize-lists-img">
+					<img src="image/mask-prize.png" alt="" />
+				</div>
+				<h5>招牌菜一折享</h5>
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+
+		<div class="prize-name-box box-sizing">
+			<img src="image/prize-name.png" alt="" />
+			<div class="prize-names">
+				<div class="prize-names-lists-box">
+					<ul class="prize-names-lists">
+						<li>
+							<span class="prize-names-lists-left">路飞</span>
+							<span class="prize-names-lists-right">获得iPhone 6S手机*1部</span>
+						</li>
+						<li>
+							<span class="prize-names-lists-left">囧恩-雪诺</span>
+							<span class="prize-names-lists-right">获得免单券*1张</span>
+						</li>
+						<li>
+							<span class="prize-names-lists-left">法力浮龙</span>
+							<span class="prize-names-lists-right">获得5折优惠券*1张</span>
+						</li>
+						<li>
+							<span class="prize-names-lists-left">阴暗渔夫</span>
+							<span class="prize-names-lists-right">获得8折优惠券*1张</span>
+						</li>
+						<li>
+							<span class="prize-names-lists-left">路飞</span>
+							<span class="prize-names-lists-right">获得iPhone 6S手机*1部</span>
+						</li>
+						<li>
+							<span class="prize-names-lists-left">囧恩-雪诺</span>
+							<span class="prize-names-lists-right">获得免单券*1张</span>
+						</li>
+						<li>
+							<span class="prize-names-lists-left">法力浮龙</span>
+							<span class="prize-names-lists-right">获得5折优惠券*1张</span>
+						</li>
+						<li>
+							<span class="prize-names-lists-left">阴暗渔夫</span>
+							<span class="prize-names-lists-right">获得8折优惠券*1张</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="mask">
+		<p class="countDown"><span class="countDown-num">59</span>S之后关闭</p>
+		<div class="mask-prize-box">
+			<div class="mask-img-box">
+				<img src="image/mask-prize.png" alt="" class="mask-img" />
+			</div>
+			<p>恭喜您获得*iPhone 6 plus*一部！</p>
+		</div>
+		<button class="mask-btn">确认</button>
+	</div>
+
+
+	<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/iscroll.js"></script>
+	<script type="text/javascript">
+		var myScroll = new IScroll('.prize-names', {
+			useTransition: true,
+			click:true,
+		});
+		var turn = $('#turn');
+		var part = true;
+		$('.start-btn').click(function() {
+			clearInterval(countDown);
+			if(part) {
+				turn.removeClass();
+				setTimeout(function(){
+					turn.addClass('animation10');
+				},300);
+				part = false;
+				setTimeout(function() {
+					part = true;
+					$('.mask').show();
+					var count = parseInt($('.countDown-num').text());
+					setInterval(function(){
+						count--;
+						$('.countDown-num').text(count);
+						if(count == 0) {
+							$('.mask').hide();
+						}
+					},1000);
+				}, 6000);
+			}
+		});
+		
+		$('.mask-btn').click(function() {
+			$('.mask').hide();
+		});
+
+		var text = parseInt($('.start-countDown-num').text());
+		console.log(typeof text);
+		var countDown = setInterval(function() {
+			text--;
+			if(text == 0) clearInterval(countDown);
+			$('.start-countDown-num').text(text);
+		},1000);
+	</script>
+	
+</body>
+</html>

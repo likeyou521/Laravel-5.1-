@@ -1,0 +1,49 @@
+@charset 'utf-8';
+
+/*
+	通用代码
+*/
+
+/* 引入字体 */
+@font-face {
+	font-family: 'ZZGFLH';
+	src: url('font/ZZGFLH.otf'),
+		 url('font/ZZGFLH.tff');
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: url('../image/bg.png') no-repeat center top;
+	background-size: 100%;
+}
+
+
+
+.flexbox {													/* flex盒子布局封装 */
+	display: flex;
+	-webkit-display: box;
+	-webkit-display: flex;
+	-moz-display: flex;
+	-ms-display: flexbox;
+	flex-flow: row wrap;
+	-webkit-flex-flow: row wrap;
+}
+.flexbox-between {
+	-webkit-box-pack: justify;
+	-webkit-justify-content: justify;
+	-moz-box-pack: justify;
+	justify-content:space-between;
+}
+.flexbox-center {
+	-webkit-box-align: center;
+	-moz-align-items: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+.box-sizing {												/* box-sizing封装 */
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}

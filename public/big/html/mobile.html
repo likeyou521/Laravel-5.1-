@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="maximum-scale=1.0,initial-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no,email=no" />
+	<title>兑奖列表</title>
+
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+</head>
+<body>
+	
+	<div class="main box-sizing">
+		<div class="iscroll">
+			<div class="prize-lists flexbox flexbox-between">
+				<div class="prize-img">
+					<img src="image/5fold.png" alt="" />
+				</div>
+				<div class="prize-message box-sizing">
+					<p class="prize-message-title">五折优惠券</p>
+					<p class="prize-message-detail">福田大润发商家可兑换奖品</p>
+					<p class="prize-message-time">兑换期限：2016-7-5至2016-7-5</p>
+				</div>
+				<div class="prize-btn">
+					<button class="exchange-btn exchanged"></button>
+				</div>
+			</div>
+
+			<div class="prize-lists flexbox flexbox-between">
+				<div class="prize-img">
+					<img src="image/8fold.png" alt="" />
+				</div>
+				<div class="prize-message box-sizing">
+					<p class="prize-message-title">八折优惠券</p>
+					<p class="prize-message-detail">福田大润发商家可兑换奖品</p>
+					<p class="prize-message-time">兑换期限：2016-7-5至2016-7-5</p>
+				</div>
+				<div class="prize-btn">
+					<button class="exchange-btn"></button>
+				</div>
+			</div>
+
+			<div class="prize-lists flexbox flexbox-between">
+				<div class="prize-img">
+					<img src="image/mask-prize.png" alt="" />
+				</div>
+				<div class="prize-message box-sizing">
+					<p class="prize-message-title">iPhone6S</p>
+					<p class="prize-message-detail">福田大润发商家可兑换奖品</p>
+					<p class="prize-message-time">兑换期限：2016-7-5至2016-7-5</p>
+				</div>
+				<div class="prize-btn">
+					<button class="exchange-btn"></button>
+				</div>
+			</div>
+
+			<div class="prize-lists flexbox flexbox-between">
+				<div class="prize-img">
+					<img src="image/mask-prize.png" alt="" />
+				</div>
+				<div class="prize-message box-sizing">
+					<p class="prize-message-title">华为荣耀6</p>
+					<p class="prize-message-detail">福田大润发商家可兑换奖品</p>
+					<p class="prize-message-time">兑换期限：2016-7-5至2016-7-5</p>
+				</div>
+				<div class="prize-btn">
+					<button class="exchange-btn"></button>
+				</div>
+			</div>
+
+			<div class="prize-lists flexbox flexbox-between">
+				<div class="prize-img">
+					<img src="image/one.png" alt="" />
+				</div>
+				<div class="prize-message box-sizing">
+					<p class="prize-message-title">小米路由器</p>
+					<p class="prize-message-detail">福田大润发商家可兑换奖品</p>
+					<p class="prize-message-time">兑换期限：2016-7-5至2016-7-5</p>
+				</div>
+				<div class="prize-btn">
+					<button class="exchange-btn"></button>
+				</div>
+			</div>
+
+			<div class="prize-lists flexbox flexbox-between">
+				<div class="prize-img">
+					<img src="image/two.png" alt="" />
+				</div>
+				<div class="prize-message box-sizing">
+					<p class="prize-message-title">小米手环</p>
+					<p class="prize-message-detail">福田大润发商家可兑换奖品</p>
+					<p class="prize-message-time">兑换期限：2016-7-5至2016-7-5</p>
+				</div>
+				<div class="prize-btn">
+					<button class="exchange-btn"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<img src="image/exchange-bottom.png" alt="" />
+	</div>
+
+	<div class="mask">
+		<div class="exchange-box box-sizing">
+			<span class="close"></span>
+			<img src="image/exchange-font.png" alt="" />
+			<p class="num">TXNB</p>
+			<p class="font">凭借兑奖密码去商家兑换奖品</p>
+		</div>
+	</div>
+
+
+	<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/iscroll.js"></script>
+	<script type="text/javascript">
+		var myScroll = new IScroll('.main', {
+			useTransition: true,
+			click:true,
+		});
+		$('.exchange-btn').click(function() {
+			var me = $(this);
+			if(me.hasClass('exchanged')) return ;
+			me.addClass('exchanged');
+			$('.mask').show();
+		})
+		$('.close').click(function() {
+			$('.mask').hide();
+		});
+		
+	</script>
+</body>
+</html>
